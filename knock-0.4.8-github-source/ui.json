@@ -1,0 +1,25 @@
+{
+  "kit": {"theme": "amber", "accent": "ffffb735"},
+  "qlinkGroups": "rows",
+  "style": {"background": "ff151617", "text": "fff7f2e8"},
+  "pages": [
+    {
+      "name": "KNOCK",
+      "background": "knock-panel.png",
+      "controls": [
+        {"param": "Threshold", "widget": "knob"},
+        {"param": "Attack", "widget": "knob"},
+        {"param": "Release", "widget": "knob"},
+        {"param": "Transient", "widget": "knob", "polarity": "bipolar"},
+        {"param": "Input", "widget": "fader", "polarity": "bipolar"},
+        {"param": "Drive", "widget": "knob"},
+        {"param": "Clip Ceiling", "widget": "knob"},
+        {"param": "Output", "widget": "fader", "polarity": "bipolar"},
+        {"param": "Source", "widget": "switch"},
+        {"param": "Style", "widget": "switch"},
+        {"param": "Clip", "widget": "switch"},
+        {"param": "Mix", "widget": "fader"}
+      ]
+    }
+  ]
+}

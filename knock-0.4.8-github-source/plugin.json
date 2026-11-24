@@ -1,0 +1,17 @@
+{
+  "name": "KNOCK",
+  "manufacturer": "HEADDRUMZ",
+  "version": "0.4.8",
+  "format": "vst2",
+  "kind": "effect",
+  "uid": "HtNw",
+  "numInputs": 2,
+  "numOutputs": 2,
+  "category": "Effect",
+  "file32": "VST/knock-arm32.so",
+  "file64": "VST/knock-arm64.so",
+  "description": "HEADDRUMZ stereo drum dynamics and colour processor.",
+  "author": "HEADDRUMZ",
+  "url": "",
+  "license": "MIT"
+}

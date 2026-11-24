@@ -1,0 +1,20 @@
+--- a/tools/host-sim/host_sim.cpp
++++ b/tools/host-sim/host_sim.cpp
+@@ -1248,7 +1248,6 @@
+ 
+             setPhase("effSetChunk");
+             VstIntPtr ok = disp(e, effSetChunk, 0, n, saved.data());
+-            r.run("render (after effSetChunk)", 2.0 * opt.block / opt.sr, opt.block, none, !instrument, false, false, nullptr);
+             int bad = 0, quant = 0;
+             for (int i = 0; i < numParams; ++i)
+             {
+@@ -1272,6 +1271,9 @@
+                 rep.pass("state round-trip: re-saved chunk is byte-identical");
+             else
+                 rep.warn("state round-trip: re-saved chunk differs from the original (%ld vs %ld bytes) - fine if your state has non-parameter content", (long)n2, (long)n);
++
++            // Render only after inspecting state, since live meters advance during processing.
++            r.run("render (after effSetChunk)", 2.0 * opt.block / opt.sr, opt.block, none, !instrument, false, false, nullptr);
+ 
+             // Robustness: garbage must not crash or corrupt.
+             uint8_t junk[64];
